@@ -1,4 +1,3 @@
-/* ---- RESET BÀSIC I GLOBALS ---- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,7 +12,6 @@ main {
     margin: 0 auto;
 }
 
-/* ---- 1. HEADER I NAVEGACIÓ ---- */
 .header-principal {
     display: flex;
     justify-content: space-between;
@@ -40,7 +38,6 @@ main {
     font-weight: bold;
 }
 
-/* ---- 2. SECCIÓ HERO ---- */
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -54,7 +51,6 @@ main {
     border-radius: 5px;
 }
 
-/* ---- 3. SECCIÓ LLOCS (TARGETES) ---- */
 .graella-llocs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -69,7 +65,6 @@ main {
     border-radius: 5px;
 }
 
-/* ---- 4. SECCIÓ BARRIS ---- */
 .barris-container {
     display: flex;
     gap: 20px;
@@ -84,7 +79,6 @@ main {
     border-radius: 5px;
 }
 
-/* ---- 5. FOOTER ---- */
 .footer-principal {
     display: flex;
     flex-direction: column;
@@ -98,4 +92,28 @@ main {
 
 .footer-principal p {
     margin: 5px 0;
+}
+@media (max-width: 768px) {
+    .graella-llocs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .barris-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-principal {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-menu ul {
+        padding: 0;
+    }
+    .nav-menu li {
+        margin: 0 10px;
+    }
+    .graella-llocs {
+        grid-template-columns: 1fr;
+    }
 }
